@@ -35,4 +35,12 @@ body {
 
 .nav-link:hover {
     text-decoration: underline;
+    color: #B6ACF5;
+}
+
+.typing-container {
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 20px;
+    text-align: center;
 }
