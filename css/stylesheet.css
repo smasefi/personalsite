@@ -10,6 +10,7 @@ body {
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     gap: 10px;
     padding: 0px;
+    margin: 0 0 0px 0;
 }
 
 .grid-item {
@@ -43,4 +44,51 @@ body {
     font-weight: bold;
     margin-top: 20px;
     text-align: center;
+}
+
+.selfie {
+    width: 450px;
+    height: auto;
+}
+
+.grid-container1 {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two columns layout */
+    padding: 0 20px; /* Remove top padding, keep left and right padding */
+    margin: 0 0 0 50px; /* Remove top margin, keep left margin */
+}
+
+.grid-item1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.grid-item2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.line {
+    width: 100%;
+    height: 1.5px;
+    background-color: black;
+    margin: 20px 0;
+
+}
+
+.intro-paragraph {
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .grid-container1 {
+        grid-template-columns: 1fr; /* Single column layout on smaller screens */
+    }
+    .grid-item1, .grid-item2 {
+        justify-content: center;
+        text-align: center;
+        padding: 10px;
+    }
 }
