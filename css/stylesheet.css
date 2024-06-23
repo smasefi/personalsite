@@ -5,39 +5,12 @@ body {
     font-family: 'Noto Sans', sans-serif;
 }
 
-.grid-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    gap: 10px;
-    padding: 0px;
-    margin: 0 0 0px 0;
+/* Header styles */
+header {
+    padding: 10px 20px;
 }
 
-.grid-item {
-    padding: 15px;
-    text-align: center;
-    font-size: 15px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
 
-.logo {
-    width: 350px; /* Adjust the size as needed */
-    height: auto; /* Maintain aspect ratio */
-    padding: 5px;
-}
-
-.nav-link {
-    text-decoration: none;
-    color: #000;
-    font-weight: bold;
-}
-
-.nav-link:hover {
-    text-decoration: underline;
-    color: #B6ACF5;
-}
 
 .typing-container {
     font-size: 24px;
@@ -53,9 +26,9 @@ body {
 
 .grid-container1 {
     display: grid;
-    grid-template-columns: 1fr 1fr; /* Two columns layout */
-    padding: 0 20px; /* Remove top padding, keep left and right padding */
-    margin: 0 0 0 50px; /* Remove top margin, keep left margin */
+    grid-template-columns: 1fr 1fr;
+    padding: 0 20px; 
+    margin: 10px 0 0 50px; 
 }
 
 .grid-item1 {
@@ -75,7 +48,6 @@ body {
     height: 1.5px;
     background-color: black;
     margin: 20px 0;
-
 }
 
 .intro-paragraph {
@@ -83,12 +55,36 @@ body {
 }
 
 @media (max-width: 768px) {
+    .grid-container {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Adjust to your preference */
+        gap: 5px; /* Reduce gap for mobile */
+    }
+
     .grid-container1 {
         grid-template-columns: 1fr; /* Single column layout on smaller screens */
+        padding: 0 10px; /* Adjust padding */
+        margin: 10px 0;
     }
+
+    .grid-item{
+        justify-content: center;
+        text-align: center;
+        font-size: 14px;
+    } 
+    
     .grid-item1, .grid-item2 {
         justify-content: center;
         text-align: center;
         padding: 10px;
+    }
+
+    .logo {
+        width: 100%; /* Make the logo responsive */
+        max-width: 300px; /* Adjust max-width as needed */
+    }
+
+    .selfie {
+        width: 100%; /* Make the selfie image responsive */
+        max-width: 100%;
     }
 }
