@@ -35,68 +35,78 @@
     }
 
     .spotify-embed {
-            margin: 30px;
-        }
-    .h3{
         margin: 30px;
     }
 
+    .h3 {
+        margin: 30px;
+    }
+
+    .btn {
+        background-color: blueviolet;
+    }
+
+    .titttle {
+        padding-top: 100px;
+        padding-bottom: 20px;
+    }
 </style>
 <body>
     <nav class="navbar sticky-top bg-body-tertiary">
         <div class="container-fluid">
             <a class="navbar-brand" href="index.html">Samantha's Portfolio</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
+                <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNavDropdown">
-              <ul class="navbar-nav">
-                <li class="nav-item">
-                  <a class="nav-link active" aria-current="page" href="index.html">Home</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="work.html">Work</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="travel.html">Travel</a>
-                </li>
-                <li class="nav-item dropdown">
-                </li>
-              </ul>
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="work.html">Work</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="travel.html">Travel</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                    </li>
+                </ul>
             </div>
         </div>
-      </nav>
-<center>
-      <div class="container mt-5">
-        <div class="row">
-            <div class="col-md-6 leftcol">
-                <div id="typing-container" class="typing-container">
-                    <!-- Your typing container content here -->
+    </nav>
+    <center>
+        <div class="container mt-5">
+            <div class="row">
+                <div class="col-md-6 leftcol">
+                    <div id="typing-container" class="typing-container">
+                        <!-- Your typing container content here -->
+                    </div>
+                    <div class="line"></div>
+                    <div class="intro-paragraph">
+                        ✨ Hi, my name is <b>Samantha Asefi</b>! I'm currently a Software Engineer at Bank of America & a M.S. in Data Science student at the University of Virginia.
+                    </div>
+                    <br/>
+                    <div class="intro-paragraph">
+                        Previously, I studied Computer Science at the University of Virginia and minored in Religious Studies. 
+                    </div>
+                    <br/>
+                    <div class="intro-paragraph">
+                        I love reality television (specifically Bravo shows), landscape photography, travel, board games, indulging in thriller books and running! ✨
+                    </div>
                 </div>
-                <div class="line"></div>
-                <div class="intro-paragraph">
-                    ✨ Hi, my name is <b>Samantha Asefi</b>! I'm currently a Software Engineer at Bank of America & a M.S. in Data Science student at the University of Virginia.
+                <div class="col-md-6">
+                    <img src="images/memoji.png" class="memoji" alt="Selfie">
                 </div>
-                <br/>
-                <div class="intro-paragraph">
-                    Previously, I studied Computer Science at the University of Virginia and minored in Religious Studies. 
-                </div>
-                <br/>
-                <div class="intro-paragraph">
-                    I love reality television (specifically Bravo shows), landscape photography, travel, board games, indulging in thriller books and running! ✨
-                </div>
-            </div>
-            <div class="col-md-6">
-                <img src="images/memoji.png" class="memoji" alt="Selfie">
             </div>
         </div>
-    </div>
-    <div class="h3">
-        Current favorite song:
-    </div>
-    <div class="spotify-embed">
-    <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/2zmyJcdmKKEUnreQqbUhiT?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-</div>
+        <h3 class="titttle">A song I love & reminds me of undergrad!</h3>
+        <button class="btn btn-primary" id="generate-song-btn">another!</button>
+
+        <div class="spotify-embed" id="spotify-embed-container">
+            <iframe id="spotify-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/track/2zmyJcdmKKEUnreQqbUhiT?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+        </div>
+    </center>
     <footer>
         <div class="container mt-5 links">
             <div class="row justify-content-center">
@@ -115,7 +125,6 @@
     </footer>
     <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="js/script.js"></script>
-    
-    </body>
+</body>
 </html>
 
