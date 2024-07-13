@@ -50,6 +50,11 @@
         padding-top: 100px;
         padding-bottom: 20px;
     }
+
+    /* Custom style for cards */
+    .custom-card {
+        margin-bottom: 20px;
+    }
 </style>
 <body>
     <nav class="navbar sticky-top bg-body-tertiary">
@@ -75,7 +80,30 @@
             </div>
         </div>
     </nav>
-  
+
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="card custom-card">
+                    <div class="card-body">
+                        <h5 class="card-title">Pop Culture Trivia</h5>
+                        <p class="card-text">A Django application that is a trivia game about Bravo reality television shows.</p>
+                        <a href="https://github.com/smasefi/popculturetrivia" class="btn btn-primary">Code</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card custom-card">
+                    <div class="card-body">
+                        <h5 class="card-title">Personal Site</h5>
+                        <p class="card-text">This website!</p>
+                        <a href="https://github.com/smasefi/personalsite" class="btn btn-primary">Code</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <footer>
         <div class="container mt-5 links">
             <div class="row justify-content-center">
@@ -92,8 +120,8 @@
             </div>
         </div>
     </footer>
+
     <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="js/script.js"></script>
 </body>
 </html>
-
