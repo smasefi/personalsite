@@ -16,10 +16,6 @@
             margin-bottom: 40px; /* Adjust margin as needed */
         }
 
-        body {
-            background-color: #E6E5E0;
-        }
-
         .linkedin {
             height: auto;
             width: 60px;
@@ -34,14 +30,66 @@
             padding: 30px;
         }
 
-        .card {
-            margin-bottom: 20px; 
+        .card-container {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap; /* This ensures that the cards wrap to the next line if the screen is too narrow */
+            gap: 10px; /* Optional: Adds space between cards */
+            margin-top: 20px;
         }
 
-        .card-img-top-bofa {
-            margin-top: 30px;
-            margin-bottom: 30px;
+        .card {
+            flex: 1 1 calc(25% - 10px); /* 4 cards per row, adjusting for the gap */
+            margin-bottom: 20px;
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s, background-color 0.2s; /* Smooth transition for hover effects */
+            position: relative; /* Ensure position for absolute tags */
         }
+
+        .card:hover {
+            box-shadow: 0 4px 20px rgba(255, 20, 147, 0.6); /* Hot pink shadow */
+            background-color: #ff69b4; /* Hot pink background */
+            color: white; /* Change text color to white for better contrast */
+            transform: scale(1.05); /* Slightly enlarge the card */
+        }
+
+        .card-img-top {
+            max-height: 200px; /* Adjust image height as needed */
+            object-fit: cover; /* Ensure the image covers the entire space */
+            border-radius: 0.25rem 0.25rem 0 0; /* Rounded corners only at the top */
+        }
+
+        .card-tags {
+            position: absolute;
+            bottom: 10px; /* Position at the bottom of the card */
+            left: 10px; /* Adjust as needed */
+        }
+
+        .tag {
+            margin-right: 5px; 
+            background-color: #007bff; 
+            color: white; 
+            padding: 4px 6px; 
+            border-radius: 4px; 
+            font-size: 12px; 
+        }
+
+        .tag.new {
+            background-color: #aea1fb; 
+        }
+
+        .tag.hot {
+            background-color: #dffcc6; 
+        }
+
+        .tag.sale {
+            background-color: #f75c9a; 
+        }
+
+        .tag.special {
+            background-color: #a7e2eb; 
+        }
+
         .btn-resume {
             background: linear-gradient(45deg, #1e90ff, #ff7f50);
             color: white;
@@ -92,117 +140,146 @@
         </div>
     </nav>
 
-    <div class="container mt-5">
-        <div class="row">
-            <div class="col-lg-4 col-md-6 col-sm-12">
-                <div class="card">
-                    <img src="images/Bank-of-America-Emblem.png" class="card-img-top img-fluid" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Software Engineer</h5>
-                        <p class="card-text">Dates: February 2024 - Current</p>
-                        <p class="card-text">This is my current job! 👩🏽‍💻</p>
-                        <button type="button" class="btn btn-secondary" data-bs-toggle="popover"
-                            data-bs-placement="right" data-bs-custom-class="custom-popover"
-                            data-bs-title="Software Engineer"
-                            data-bs-content="Currently I serve as a software engineer under Employee Experience Technology.">
-                            
-                            learn more
-                        </button>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 col-sm-12">
-                <div class="card">
-                    <img src="images/Bank-of-America-Emblem.png" class="card-img-top img-fluid" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Software Engineer Intern</h5>
-                        <p class="card-text">Learning to code professionally!</p>
-                        <button type="button" class="btn btn-secondary" data-bs-toggle="popover"
-                            data-bs-placement="right" data-bs-custom-class="custom-popover"
-                            data-bs-title="Custom popover"
-                            data-bs-content="This popover is themed via CSS variables.">
-                            more info
-                        </button>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 col-sm-12">
-                <div class="card">
-                    <img src="images/University-of-Virginia-Logo.jpg" class="card-img-top img-fluid" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Resident Advisor</h5>
-                        <p class="card-text">The time where I overstayed my welcome in first year dorms</p>
-                        <button type="button" class="btn btn-secondary" data-bs-toggle="popover"
-                            data-bs-placement="right" data-bs-custom-class="custom-popover"
-                            data-bs-title="RA"
-                            data-bs-content="During my time as a resident advisor, I worked with a group of 20 girls each year. In my opinion,
-                            this was one of my most formative experiences because I learned a lot about how to work with others to reach a common goal.">
-                            more info
-                        </button>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="row mt-5">
-            <div class="col-lg-4 col-md-6 col-sm-12">
-                <div class="card">
-                    <img src="images/sitelogo.png" class="card-img-top img-fluid" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Card title 1</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk
-                            of the card's content.</p>
-                        <button type="button" class="btn btn-secondary" data-bs-toggle="popover"
-                            data-bs-placement="right" data-bs-custom-class="custom-popover"
-                            data-bs-title="Custom popover"
-                            data-bs-content="This popover is themed via CSS variables.">
-                            more info
-                        </button>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 col-sm-12">
-                <div class="card">
-                    <img src="images/sitelogo.png" class="card-img-top img-fluid" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Card title 2</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk
-                            of the card's content.</p>
-                        <button type="button" class="btn btn-secondary" data-bs-toggle="popover"
-                            data-bs-placement="right" data-bs-custom-class="custom-popover"
-                            data-bs-title="Custom popover"
-                            data-bs-content="This popover is themed via CSS variables.">
-                            Custom popover
-                        </button>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 col-sm-12">
-                <div class="card">
-                    <img src="images/sitelogo.png" class="card-img-top img-fluid" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Card title 3</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk
-                            of the card's content.</p>
-                        <button type="button" class="btn btn-secondary" data-bs-toggle="popover"
-                            data-bs-placement="right" data-bs-custom-class="custom-popover"
-                            data-bs-title="Custom popover"
-                            data-bs-content="This popover is themed via CSS variables.">
-                            Custom popover
-                        </button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
     <div class="row justify-content-center mt-4">
         <div class="col-md-4 d-flex justify-content-center">
             <a href="path/to/your/resume.pdf" target="_blank" class="btn-resume">Download My Resume</a>
         </div>
     </div>
-</div>
 
+    <div class="container">
+        <div class="card-container">
+            <!-- Card 1 -->
+            <div class="card" style="width: 18rem;" data-bs-toggle="modal" data-bs-target="#cardModal1">
+                <img src="images/Bank-of-America-Emblem.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Software Engineer</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">Bank of America</h6>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <div class="card-tags">
+                        <span class="tag new">New</span>
+                        <span class="tag hot">Hot</span>
+                    </div>
+                    
+                </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="card" style="width: 18rem;" data-bs-toggle="modal" data-bs-target="#cardModal2">
+                <img src="images/Bank-of-America-Emblem.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <div class="card-tags">
+                        <span class="tag sale">Sale</span>
+                    </div>
+             
+                </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="card" style="width: 18rem;" data-bs-toggle="modal" data-bs-target="#cardModal3">
+                <img src="images/University-of-Virginia-Logo.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <div class="card-tags">
+                        <span class="tag special">Special</span>
+                    </div>
+                    
+                </div>
+            </div>
+
+            <!-- Card 4 -->
+            <div class="card" style="width: 18rem;" data-bs-toggle="modal" data-bs-target="#cardModal4">
+                <img src="images/University-of-Virginia-Logo.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <div class="card-tags">
+                        <span class="tag new">New</span>
+                        <span class="tag sale">Sale</span>
+                    </div>
+              
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modals -->
+    <!-- Modal 1 -->
+    <div class="modal fade" id="cardModal1" tabindex="-1" aria-labelledby="cardModal1Label" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="cardModal1Label">Card 1</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    Content for Card 1.
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 2 -->
+    <div class="modal fade" id="cardModal2" tabindex="-1" aria-labelledby="cardModal2Label" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="cardModal2Label">Card 2</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    Content for Card 2.
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 3 -->
+    <div class="modal fade" id="cardModal3" tabindex="-1" aria-labelledby="cardModal3Label" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="cardModal3Label">Card 3</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    Content for Card 3.
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 4 -->
+    <div class="modal fade" id="cardModal4" tabindex="-1" aria-labelledby="cardModal4Label" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="cardModal4Label">Card 4</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    Content for Card 4.
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <footer>
         <div class="container mt-5 links">
